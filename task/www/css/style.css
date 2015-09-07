@@ -1,0 +1,140 @@
+/* Set background color for the login page */
+#loginPage ion-content {
+	background: #13263f; /* Old browsers */
+	background: -moz-linear-gradient(-25deg,  #13263f 0%, #13263f 40%, #13263f 40%, #1c3253 40%, #1c3253 70%, #1c3253 70%, #f2f2ff 70%, #f2f2ff 78%, #0f704e 78%, #0f704e 78%, #0f704e 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#13263f), color-stop(40%,#13263f), color-stop(40%,#13263f), color-stop(40%,#1c3253), color-stop(70%,#1c3253), color-stop(70%,#1c3253), color-stop(70%,#f2f2ff), color-stop(78%,#f2f2ff), color-stop(78%,#0f704e), color-stop(78%,#0f704e), color-stop(100%,#0f704e)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-25deg,  #13263f 0%,#13263f 40%,#13263f 40%,#1c3253 40%,#1c3253 70%,#1c3253 70%,#f2f2ff 70%,#f2f2ff 78%,#0f704e 78%,#0f704e 78%,#0f704e 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-25deg,  #13263f 0%,#13263f 40%,#13263f 40%,#1c3253 40%,#1c3253 70%,#1c3253 70%,#f2f2ff 70%,#f2f2ff 78%,#0f704e 78%,#0f704e 78%,#0f704e 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-25deg,  #13263f 0%,#13263f 40%,#13263f 40%,#1c3253 40%,#1c3253 70%,#1c3253 70%,#f2f2ff 70%,#f2f2ff 78%,#0f704e 78%,#0f704e 78%,#0f704e 100%); /* IE10+ */
+	background: linear-gradient(115deg,  #13263f 0%,#13263f 40%,#13263f 40%,#1c3253 40%,#1c3253 70%,#1c3253 70%,#f2f2ff 70%,#f2f2ff 78%,#0f704e 78%,#0f704e 78%,#0f704e 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#13263f', endColorstr='#0f704e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+/* To make the background of side menu white colored*/
+ion-side-menu ion-content {
+	background: #ffffff; 
+}
+
+.welcome_msg a {text-decoration: none; color:#ffffff;}
+
+/* Set login form in the middle of the page */
+#loginPage .scroll-content {
+  display: table !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+#loginPage .scroll {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* Set login form width:50% page */
+#loginPage .list {
+	width: 50%;
+	margin: auto;
+}
+
+/* Remove the border of .item in menu */
+ion-side-menu .item {
+	border: none;
+}
+
+/* Remove the border of .bar-header */
+.bar-header {
+	border: none;
+}
+
+/* Set color of text bar-light to green */
+.bar.bar-light .title, .bar-light .button {
+	color: #0f704e;
+}
+
+/* Set colors of icon & button-stable to orange */
+.bar-light .ion-checkmark, .button.button-stable .ion-chevron-left, .item-icon-right .icon-accessory {
+	color: #de5d43;	
+}
+
+/* Set the colors of button-energized & bar-energized to orange, and remove border */
+.button.button-energized, .bar-energized {
+	border: none;
+	background-color: #de5d43;	
+}
+
+/* Set the color of button-stable to white and green border */
+.button.button-stable {
+	background-color: #ffffff;
+	border-color: #0f704e;
+	margin : 0;	
+	line-height: 20px;
+	padding: 10px;
+}
+
+/* Set property side menu */
+ion-side-menu ion-item.item-complex .item-content {
+	text-align: center;
+	padding: 16px;
+	color: #1c3253;
+	font-size: 1.5em;
+}
+
+/* Set property for welcome message area */
+.welcome_msg {
+	background-color: #0f704e;
+	color: #ffffff;
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: bold;
+	padding: 15px 0;
+}
+
+.slider_msg {
+	text-align:center;
+	font-size:1.2em;
+	font-weight: bold;
+	padding:20px 0;
+
+}
+
+.slider_msg a{
+	text-decoration: none;
+	color:#000000;
+
+}
+
+/* Set properties for task message area */
+.task_msg {
+	background-color: #1c3253;
+	color: #ffffff;
+	text-align: center;
+	font-size: 1.2em;
+	padding: 20px 0;
+}
+
+/* set scroll area full page */
+.scroll{
+  height:100% !important
+ }
+
+/* Set properties for button in footer */
+ div.footer-button a.button.button-full {
+    width:100%;
+    margin: 0;
+    height:100%;
+    border-color: #de5d43;
+    font-size: 1.2em;
+    padding-top: 5px;
+}
+.bar-footer {
+	padding: 0;
+}
+
+/* Set properties for the task list */
+.task {
+	font-size: 1.5em;
+	margin-bottom: 10px;
+}
+
+/* Taskactive Page */
+.timephoto img {width:100px; margin-left:10px;}
+.texttime {margin-left:10px;}
