@@ -1,0 +1,442 @@
+/* Fonts */
+@font-face {
+	font-family: 'Avenir';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Avenir LT Std 35 Light'), url('../font/AvenirLTStd-Light.woff') format('woff');
+}
+@font-face {
+	font-family: 'AvenirHeavy';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Avenir LT Std 85 Heavy'), url('../font/AvenirLTStd-Heavy.woff') format('woff');
+}
+
+/* Set body properties */
+body {
+	font-family: "Avenir", Arial;
+	color: #173e68;
+}
+
+input {
+	font-family: "Avenir", Arial;
+}
+
+select {
+	background-color: #f2f2ff;
+	font-family: "Avenir", Arial;
+}
+
+button {
+	font-family: "Avenir", Arial;
+}
+
+/* Set background color for the login page */
+#loginPage ion-content {
+	background: #13263f; /* Old browsers */
+	background: -moz-linear-gradient(-25deg,  #13263f 0%, #13263f 40%, #13263f 40%, #1c3253 40%, #1c3253 70%, #1c3253 70%, #f2f2ff 70%, #f2f2ff 78%, #0f704e 78%, #0f704e 78%, #0f704e 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#13263f), color-stop(40%,#13263f), color-stop(40%,#13263f), color-stop(40%,#1c3253), color-stop(70%,#1c3253), color-stop(70%,#1c3253), color-stop(70%,#f2f2ff), color-stop(78%,#f2f2ff), color-stop(78%,#0f704e), color-stop(78%,#0f704e), color-stop(100%,#0f704e)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-25deg,  #13263f 0%,#13263f 40%,#13263f 40%,#1c3253 40%,#1c3253 70%,#1c3253 70%,#f2f2ff 70%,#f2f2ff 78%,#0f704e 78%,#0f704e 78%,#0f704e 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-25deg,  #13263f 0%,#13263f 40%,#13263f 40%,#1c3253 40%,#1c3253 70%,#1c3253 70%,#f2f2ff 70%,#f2f2ff 78%,#0f704e 78%,#0f704e 78%,#0f704e 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-25deg,  #13263f 0%,#13263f 40%,#13263f 40%,#1c3253 40%,#1c3253 70%,#1c3253 70%,#f2f2ff 70%,#f2f2ff 78%,#0f704e 78%,#0f704e 78%,#0f704e 100%); /* IE10+ */
+	background: linear-gradient(115deg,  #13263f 0%,#13263f 40%,#13263f 40%,#1c3253 40%,#1c3253 70%,#1c3253 70%,#f2f2ff 70%,#f2f2ff 78%,#0f704e 78%,#0f704e 78%,#0f704e 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#13263f', endColorstr='#0f704e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+/* Set background color for welcome_msg */
+.welcome_msg {
+	background: rgba(15,112,78,1);
+	background: -moz-linear-gradient(20deg, rgba(15,112,78,1) 0%, rgba(15,112,78,1) 10%, rgba(9,90,62,1) 10%, rgba(9,90,62,1) 65%, rgba(15,112,78,1) 65%, rgba(15,112,78,1) 100%);
+	background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(15,112,78,1)), color-stop(10%, rgba(15,112,78,1)), color-stop(10%, rgba(9,90,62,1)), color-stop(65%, rgba(9,90,62,1)), color-stop(65%, rgba(15,112,78,1)), color-stop(100%, rgba(15,112,78,1)));
+	background: -webkit-linear-gradient(20deg, rgba(15,112,78,1) 0%, rgba(15,112,78,1) 10%, rgba(9,90,62,1) 10%, rgba(9,90,62,1) 65%, rgba(15,112,78,1) 65%, rgba(15,112,78,1) 100%);
+	background: -o-linear-gradient(20deg, rgba(15,112,78,1) 0%, rgba(15,112,78,1) 10%, rgba(9,90,62,1) 10%, rgba(9,90,62,1) 65%, rgba(15,112,78,1) 65%, rgba(15,112,78,1) 100%);
+	background: -ms-linear-gradient(20deg, rgba(15,112,78,1) 0%, rgba(15,112,78,1) 10%, rgba(9,90,62,1) 10%, rgba(9,90,62,1) 65%, rgba(15,112,78,1) 65%, rgba(15,112,78,1) 100%);
+	background: linear-gradient(20deg, rgba(15,112,78,1) 0%, rgba(15,112,78,1) 10%, rgba(9,90,62,1) 10%, rgba(9,90,62,1) 65%, rgba(15,112,78,1) 65%, rgba(15,112,78,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f704e', endColorstr='#0f704e', GradientType=1 );
+}
+
+/* Set background color for task_msg */
+.task_msg {
+	background: rgba(23,62,104,1);
+	background: -moz-linear-gradient(20deg, rgba(23,62,104,1) 0%, rgba(23,62,104,1) 65%, rgba(19,49,83,1) 65%, rgba(19,49,83,1) 100%);
+	background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(23,62,104,1)), color-stop(65%, rgba(23,62,104,1)), color-stop(65%, rgba(19,49,83,1)), color-stop(100%, rgba(19,49,83,1)));
+	background: -webkit-linear-gradient(20deg, rgba(23,62,104,1) 0%, rgba(23,62,104,1) 65%, rgba(19,49,83,1) 65%, rgba(19,49,83,1) 100%);
+	background: -o-linear-gradient(20deg, rgba(23,62,104,1) 0%, rgba(23,62,104,1) 65%, rgba(19,49,83,1) 65%, rgba(19,49,83,1) 100%);
+	background: -ms-linear-gradient(20deg, rgba(23,62,104,1) 0%, rgba(23,62,104,1) 65%, rgba(19,49,83,1) 65%, rgba(19,49,83,1) 100%);
+	background: linear-gradient(20deg, rgba(23,62,104,1) 0%, rgba(23,62,104,1) 65%, rgba(19,49,83,1) 65%, rgba(19,49,83,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#173e68', endColorstr='#133153', GradientType=1 );
+}
+
+/* To make the background of side menu white colored*/
+ion-side-menu ion-content {
+	background: #f2f2ff; 
+}
+
+/* Set welcome message properties */
+.welcome_msg a {
+	text-decoration: none; 
+	color:#f2f2ff;
+}
+
+
+/* Set login form in the middle of the page */
+#loginPage .scroll-content {
+  display: table !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+#loginPage .scroll {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* Set login form width:50% page */
+#loginPage .list {
+	width: 50%;
+	margin: auto;
+}
+
+/* Remove the border of .item in menu */
+ion-side-menu .item {
+	border: none;
+}
+
+/* Remove the border of .bar-header */
+.bar-header {
+	border: none;
+}
+
+
+/* Set color of text bar-light to green */
+.bar.bar-light .title, .bar-light .button {
+	color: #0f704e;
+	font-family: "Avenir", Arial;
+	font-size: 1.8em;
+}
+
+.bar.bar-light .title {
+	text-align: left;
+	padding-top: 3px;
+	padding-left: 40px;
+	letter-spacing: 0.5px;
+}
+
+/* Set colors of icon & button-light to orange */
+.bar-light .ion-checkmark, .bar-light .ion-android-add, .button.button-light .ion-chevron-left, .item-icon-right .icon-accessory,
+.bar-light .ion-checkmark:hover, .bar-light .ion-android-add:hover, .button.button-light .ion-chevron-left:hover, .item-icon-right .icon-accessory:hover,
+.bar-light .ion-checkmark.active, .bar-light .ion-android-add.active, .button.button-light .ion-chevron-left.active, .item-icon-right .icon-accessory.active,
+.bar-light .ion-checkmark.activated, .bar-light .ion-android-add.activated, .button.button-light .ion-chevron-left.activated, .item-icon-right .icon-accessory.activated {
+	border: none;
+	color: #de5d43;	
+	opacity: 1;
+}
+
+/* Set button royal to navy blue */
+.button.button-royal, .button.button-royal.active, .button.button-royal.activated {
+	border-color: #13263f;
+	background-color: #1c3253;
+}
+
+/* Set the colors of button-energized & bar-energized to orange, and remove border */
+.button.button-energized, .bar-energized,
+.button.button-energized.active, .button.button-energized.activated {
+	border: none;
+	background-color: #de5d43;	
+}
+
+/* Set the colors of button-stable */
+.button.button-stable {
+	background-color: #b2b2b2;
+	color: #fff;
+}
+.button.button-stable:hover {
+	color: #fff;
+}
+
+/* Set property side menu */
+ion-side-menu ion-item.item-complex .item-content {
+	text-align: center;
+	padding: 16px;
+	color: #1c3253;
+	font-size: 1.5em;
+}
+
+/* Set property for welcome message area */
+.welcome_msg {
+	color: #f2f2ff;
+	text-align: center;
+	font-size: 2.1em;
+	padding: 15px 0;
+	font-family: "AvenirHeavy", Arial;
+}
+
+/* Set properties for task message area */
+.task_msg {
+	color: #f2f2ff;
+	text-align: center;
+	font-size: 1.3em;
+	padding: 20px 0;
+	margin: 0px;
+	font-family: "AvenirHeavy", Arial;
+}
+
+/* set scroll area full page */
+.scroll{
+  height:100% !important
+ }
+
+/* Set properties for button in footer */
+ div.footer-button a.button.button-full {
+    width:100%;
+    margin: 0;
+    height:100%;
+    border-color: #de5d43;
+    font-size: 1.4em;
+    padding-top: 5px;
+}
+.bar-footer {
+	padding: 0;
+}
+
+/* Set properties for the task list */
+.task {
+	font-size: 1.5em;
+	margin-bottom: 10px;
+}
+
+.taskx2 {
+	margin-top: 5px;
+	font-size: 1.6em;
+	margin-bottom: 5px;
+}
+
+.task_task {
+	font-size: 1.5em;
+	color: #173e68;
+	line-height: 30px;
+	margin-top: 5px;
+}
+.task_task2 {
+	font-size: 1.5em;
+	color: #173e68;
+	line-height: 30px;
+	margin-top: 10px;
+}
+.task_title {
+	font-size: 1em;
+	color: #173e68;
+	line-height: 30px;
+}
+.item {
+	color: #173e68;
+}
+ion-list.task_list .list {
+	margin: 10px;
+	-webkit-box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.50);
+	-moz-box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.50);
+	box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.50);
+}
+.item-complex.item-icon-right .item-content {
+	color: #173e68;
+}
+
+/* Taskactive Page */
+.timephoto img {width:100px; margin-left:10px;}
+.texttime {margin-left:10px;}
+
+
+/* Set background of the content */
+.pane, .view {
+	background-color: #c2c2cc;
+}
+
+/* Set properties for content */
+.content_pane {
+	background-color: #f2f2ff;
+	margin: 10px;
+	-webkit-box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.50);
+	-moz-box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.50);
+	box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.50);
+	margin-top: 20px;
+}
+
+/* Set properties for select */
+select {
+	border: none;
+}
+
+/* Set properties for rating */
+.rating {
+	unicode-bidi: bidi-override;
+	direction: rtl;
+}
+.rating > span {
+	display: inline-block;
+	position: relative;
+	width: 1.1em;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+	content: "\2605";
+	position: absolute;
+}
+
+/* Set properties for list divider */
+.item-divider {
+	color: #1c3253;
+	font-family: "AvenirHeavy", Arial;
+	background-color: #f2f2ff;
+}
+
+/* Set no border for button */
+ .button-noborder {
+ 	border: none;
+ }
+
+ .text-center {
+ 	text-align: center;
+ 	margin: auto auto;
+ }
+
+ .button.button-light.icon {
+ 	color: #de5d43;
+ }
+
+.swipe_check_in {
+	text-align: center;
+}
+
+.task-list {
+	background-color: black;
+}
+
+.spacer {
+	height: 20px;
+}
+
+.spacertop {
+	height: 28px;
+}
+
+
+#centerbox {
+	width: 100%;
+}
+
+.topbg
+{
+
+}
+
+.check_in_out_button {
+	font-size: 1em;
+}
+
+.barstyle {
+	margin: 0 auto;
+	margin-left: 1%;
+	margin-top: 8px;
+	margin-right: 1%;
+	width: 98%;
+	-webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.50);
+	-moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.50);
+	box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.50);
+}
+
+.whiteblockleft {
+	float:left;
+	background-color:#f2f2ff;
+	width:18px;
+}
+
+.whiteblockright {
+	float:right;
+	background-color:#f2f2ff;
+	width:18px;
+}
+
+.attdblock {
+	margin-left: 40px; 
+	font-size: 1em; 
+	background-color: #f2f2ff;
+}
+
+.assgblock {
+	background-color: #133D69;
+	color: #f2f2ff;
+	border: 0px;
+}
+
+.unassgblock {
+	background-color: #103054;
+	color: #f2f2ff;
+	border: 0px;
+}
+
+.checkinbar {
+	margin: 0px;
+	padding: 0px;
+}
+
+.taskbtn {
+	color: #f2f2ff;
+	background: rgba(23,62,104,1);
+	background: -moz-linear-gradient(20deg, rgba(23,62,104,1) 0%, rgba(23,62,104,1) 65%, rgba(19,49,83,1) 65%, rgba(19,49,83,1) 100%);
+	background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(23,62,104,1)), color-stop(65%, rgba(23,62,104,1)), color-stop(65%, rgba(19,49,83,1)), color-stop(100%, rgba(19,49,83,1)));
+	background: -webkit-linear-gradient(20deg, rgba(23,62,104,1) 0%, rgba(23,62,104,1) 65%, rgba(19,49,83,1) 65%, rgba(19,49,83,1) 100%);
+	background: -o-linear-gradient(20deg, rgba(23,62,104,1) 0%, rgba(23,62,104,1) 65%, rgba(19,49,83,1) 65%, rgba(19,49,83,1) 100%);
+	background: -ms-linear-gradient(20deg, rgba(23,62,104,1) 0%, rgba(23,62,104,1) 65%, rgba(19,49,83,1) 65%, rgba(19,49,83,1) 100%);
+	background: linear-gradient(20deg, rgba(23,62,104,1) 0%, rgba(23,62,104,1) 65%, rgba(19,49,83,1) 65%, rgba(19,49,83,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#173e68', endColorstr='#133153', GradientType=1 );
+}
+
+.button-bar {
+	font-size: 1.4em;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+ion-option-button.button.button-light {
+  background: transparent;
+}
+
+textarea {
+	background-color: #f2f2ff;
+	font-family: "Avenir", Arial;
+}
+
+.tasktxt {
+	font-size: 1.4em;
+}
+
+.whbg {
+	background-color: #f2f2ff;
+}
+
+.strong {
+	font-weight: bolder;
+}
+
+.tot {
+	font-weight: bolder;
+	color: #f2f2ff;
+	background-color: #0f704e;
+}
+
+.InProg {
+	font-size: 0.8em;
+	color: #f2f2ff;
+	font-weight: bolder;
+	background-color: #0f704e;
+	border-radius: 6px;
+/*		-webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.25);
+	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.25);*/
+}
+
+.wrapping-list{
+	max-width: 75%;
+    overflow: initial;
+    white-space: initial;
+}

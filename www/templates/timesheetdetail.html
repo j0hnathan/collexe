@@ -1,0 +1,49 @@
+<ion-view hide-nav-bar="true" view-title="task">
+<div class="bar bar-header bar-light barstyle" >
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  	<h1 class="title">{{ curdate | date:'dd/MM/yyyy' }}</h1>
+  	<span class="button button-icon icon ion-checkmark-round" ng-show="checkin_check" style="color: #DF5D44;"></span>
+  </div>
+  <ion-content class="has-header" scroll="false">
+
+  <div class="content_pane">
+
+  <div class="button-bar taskbtn">
+        <i class="button button-full icon icon-left ion-chevron-left button-noborder assgblock" data-ng-click="showTimesheetPrev('{{ show }}', '{{ navtime }}')"></i>
+        <div style="width:90%" class="text-center">{{ showType | uppercase }} TIMESHEET<br/>
+        {{ headertime | date:'dd/MM/yyyy' }}</div>
+        <i class="button button-full icon icon-right ion-chevron-right button-noborder unassgblock " data-ng-click="showTimesheetNext('{{ show }}', '{{ navtime }}')"></i>
+    </div>
+
+    <ion-list show-delete="false" can-swipe="false">
+      <ion-item ng-repeat="timesheet in timesheets" class="item-remove-animate item-icon-right" type="item-text-wrap">
+        <div style="float:right; font-size: 1.2em;" ng-show="timesheet.task_status_id == 'P' && show =='D'"> Elapsed:</div>
+        <div style="float:right; font-size: 1.2em;" ng-show="timesheet.task_status_id == 'F' && show =='D'"> Elapsed:</div>
+        <div style="float:right; font-size: 1.2em;" ng-show="show =='W' || show =='M'">{{timesheet.jobdays}} job days</div>
+        <div class="task">{{timesheet.type | uppercase}}</div>
+        <div class="wrapping-list">
+          <!--<span ng-show="timesheet.task_status_id == 'P' || timesheet.task_status_id == 'F'">{{timesheet.status | uppercase }} - </span>-->
+          <span ng-show="show =='W' || show =='M' && timesheet.task_status_id =='S'">
+          {{timesheet.status | uppercase }} - </span> 
+          {{timesheet.fullname}}</div>
+        <div class="wrapping-list">{{timesheet.projectname}} {{timesheet.address}}</div>
+        <div class="wrapping-list">
+        <span ng-show="timesheet.task_status_id == 'F'">STARTED&nbsp;&nbsp;&nbsp;&nbsp;{{timesheet.minjob}} {{timesheet.timestamp_start }}<br>ENDED&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{timesheet.maxjob}} {{timesheet.timestamp_finish }}</span></div>
+        <i class="icon timesheet_interval" ng-show="timesheet.task_status_id == 'S' && show == 'D'">{{timesheet.status}}</i>
+        <i class="icon timesheet_interval" ng-show="timesheet.task_status_id == 'S' && show == 'W'"><br>{{timesheet.elapsedtoday}}</i>
+        <i class="icon timesheet_interval" ng-show="timesheet.task_status_id == 'S' && show == 'M'"><br>{{timesheet.elapsedtoday}}</i>
+        <i class="icon timesheet_interval" ng-show="timesheet.task_status_id == 'P'"><br>
+        {{timesheet.elapsedtoday}}</i>
+        <i class="icon timesheet_interval" ng-show="timesheet.task_status_id == 'P' && show == 'M'"><br>
+        {{timesheet.elapsedtoday}}</i>
+         <i class="icon timesheet_interval" ng-show="timesheet.task_status_id == 'F'"><br>
+        {{timesheet.elapsedtoday}}<br><br>{{timesheet.elapsed}}</i>
+      </ion-item>  
+    </ion-list>      
+
+
+    </div>
+
+  </ion-content>
+
+</ion-view>

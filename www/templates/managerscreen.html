@@ -1,0 +1,70 @@
+<body ng-controller="ManagerscreenCtrl" class="button button-dark">
+<ion-view hide-nav-bar="true" view-title="Task of the day">
+  <div id="centerbox">
+  <div class="bar bar-header bar-light barstyle" >
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    <span class="title">{{ curdate | date:'dd/MM/yyyy' }}</span>
+    <span class="button button-icon icon ion-android-add" ng-click="createtask()"></span>
+  </div>
+  </div>
+  <ion-content class="has-header">
+
+    <ion-refresher
+        on-refresh="showData()"
+        pulling-text="Pull to refresh"
+     refreshing-text="Refreshing"
+     refreshing-icon="ion-loading-c">
+    </ion-refresher>  
+    
+    <div class="padding welcome_msg">
+        <div class="spacertop"></div>
+        GOOD MORNING<br/>
+        <div style="height: 10px;"></div>
+        {{fullname | uppercase}}
+        <div class="spacer"></div>
+    </div>
+    
+    <ion-list show-delete="false" can-swipe="true">
+      <ion-item class="swipe_check_in item-remove-animate text-center" type="item-text-wrap">
+        <div class="attdblock icon ion-chevron-left">&nbsp;&nbsp;CHECK IN</div>
+        <ion-option-button class="button-balanced check_in_out_button" ng-click="AttendIn()" ng-disabled="checkInDisabled">CHECK IN</ion-option-button>
+        <ion-option-button class="button-assertive check_in_out_button" ng-click="AttendOut()" ng-disabled="checkOutDisabled">CHECK OUT</ion-option-button>
+      </ion-item>      
+    </ion-list>
+
+    <div class="padding task_msg text-center">  
+      <span class="whiteblockleft">&nbsp;</span>
+      <span>Working</span>
+      <span class="whiteblockright">&nbsp;</span>
+    </div>
+
+    <div class="topbg">
+
+    <ion-list class="task_list" show-delete="false" can-swipe="true" ng-show="checkin_check">
+      <div class="item item-divider assgblock">Assigned Task</div>
+      <ion-item ng-repeat="assigned in assignedTasks" class="item-remove-animate item-icon-right" type="item-text-wrap" ng-click="taskMore('{{assigned.id}}','A')">
+        <div class="task">{{assigned.type | uppercase}}&nbsp;&nbsp;<span class="InProg">{{assigned.inprog | uppercase }}</span></div>
+        <div>{{assigned.taskdate| date:'dd/MM/yyyy'}} | {{assigned.fullname}}</div>
+        <i class="icon ion-chevron-right icon-accessory" style="font-size: 1.6em;"></i>
+        <!--<ion-option-button class="button-positive check_in_out_button" ng-click="taskMore('{{assigned.id}}','A')">MORE</ion-option-button>        
+        <ion-option-button class="button-balanced check_in_out_button">START</ion-option-button>
+        <ion-option-button class="button-assertive check_in_out_button">STOP</ion-option-button>-->
+      </ion-item> 
+          </ion-list>  
+
+      <ion-list class="task_list" show-delete="false" can-swipe="true" ng-show="checkin_check">  
+      <div class="item item-divider unassgblock">Unassigned Task</div>
+      <ion-item ng-repeat="unassigned in unassignedTasks" class="item-remove-animate item-icon-right" type="item-text-wrap" ng-click="assignTask('{{unassigned.id}}')">
+        <div class="task">{{unassigned.type | uppercase}}</div>
+        <div>{{unassigned.taskdate| date:'dd/MM/yyyy'}} | {{unassigned.address }} {{unassigned.city }}</div>
+        <!--<div><small>Status : {{unassigned.status}}</small></div>-->
+        <i class="icon ion-chevron-right icon-accessory" style="font-size: 1.6em;"></i>
+        <!--<ion-option-button class="button-positive check_in_out_button" ng-click="assignTask('{{unassigned.id}}')">MORE</ion-option-button>        
+        <ion-option-button class="button-balanced check_in_out_button">START</ion-option-button>
+        <ion-option-button class="button-assertive check_in_out_button">PAUSE</ion-option-button>-->
+      </ion-item>    
+    </ion-list>    
+    </div>
+  </ion-content>
+</ion-view>
+</body>

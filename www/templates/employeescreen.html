@@ -1,0 +1,55 @@
+<body ng-controller="ListCtrl" class="button button-dark">
+<ion-view hide-nav-bar="true" view-title="Task of the day">
+  <div class="bar bar-header bar-light barstyle">
+  	<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  	<h1 class="title">{{ curdate | date:'dd/MM/yyyy' }}</h1>
+  	<span class="button button-icon icon ion-checkmark-round" ng-show="checkin_check" style="color: #DF5D44;"></span>
+  </div>
+  <ion-content class="has-header">
+
+    <ion-refresher
+        on-refresh="showData()"
+        pulling-text="Pull to refresh"
+     refreshing-text="Refreshing"
+     refreshing-icon="ion-loading-c">
+    </ion-refresher>  
+      
+    <div class="padding welcome_msg">
+        <div class="spacertop"></div>
+        GOOD MORNING<br/>
+        <div style="height: 10px;"></div>
+        {{fullname | uppercase}}
+        <div class="spacer"></div>
+    </div>
+    
+    <ion-list show-delete="false" can-swipe="true">
+      <ion-item class="swipe_check_in item-remove-animate text-center" type="item-text-wrap">
+        <div class="attdblock icon ion-chevron-left">&nbsp;&nbsp;CHECK IN</div>
+        <ion-option-button class="button-balanced check_in_out_button" ng-click="AttendIn()" 
+        ng-disabled="checkInDisabled">CHECK IN</ion-option-button>
+        <ion-option-button class="button-assertive check_in_out_button" ng-click="AttendOut()" 
+        ng-disabled="checkOutDisabled">CHECK OUT</ion-option-button>
+      </ion-item>      
+    </ion-list>
+
+    <div class="padding task_msg">  
+      <span class="whiteblockleft">&nbsp;</span>
+  	  <span>Here are your tasks of the day</span>
+      <span class="whiteblockright">&nbsp;</span>
+    </div>
+
+    <ion-list class="task_list" show-delete="false" can-swipe="true" ng-show="checkin_check">
+      <ion-item ng-repeat="task_item in tasklist track by $index" class="item-remove-animate item-icon-right" type="item-text-wrap" ng-click="taskMore(task_item.id,task_item.task_status_id)"><!--ng-class="{'S': 'InProg'}[task_item.task_status_id]"-->
+        <div class="task">{{task_item.type | uppercase}}&nbsp;&nbsp;<span class="InProg">{{task_item.inprog | uppercase }}</span></div>
+        <div>{{task_item.taskdate | date:'dd/MM/yyyy'}} | {{task_item.city }}</div>
+        <i class="icon ion-chevron-right icon-accessory"  style="font-size: 1.6em;"></i>
+        <ion-option-button class="button-positive check_in_out_button" ng-click="taskMore(task_item.id,task_item.task_status_id)">MORE</ion-option-button>        
+        <ion-option-button class="button-balanced check_in_out_button" ng-click="showStartTaskAlert(task_item.id)">START</ion-option-button>
+        <!--<ion-option-button class="button-balanced check_in_out_button" ng-click="showPauseTaskAlert(task_item.id)" ng-hide="hidepausebutton()">PAUSE</ion-option-button>-->
+        <ion-option-button class="button-assertive check_in_out_button" ng-click="showStopTaskConfirm(task_item.id)">FINISH</ion-option-button>
+      </ion-item>      
+    </ion-list>
+
+  </ion-content>
+</ion-view>
+</body>

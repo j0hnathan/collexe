@@ -1,0 +1,65 @@
+<ion-view hide-nav-bar="true" view-title="Assign Task">
+  <div class="bar bar-header bar-light barstyle">
+   <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+   <h1 class="title">{{ curdate | date:'dd/MM/yyyy' }}</h1>
+   <span class="button button-icon icon ion-checkmark-round" ng-show="checkin_check" style="color: #DF5D44;"></span>
+  </div>
+  <ion-content class="has-header" scroll="false">
+
+    <div class="content_pane">
+      <a class="button button-full item-icon-left whbg" ng-click="goBack()">
+      <div class="task_task2">ASSIGN TASK</div>
+      <i class="icon ion-chevron-left icon-accessory" style="color: #133D69"></i>
+    </a>
+      <form action="" class="padding">
+      <label class="item item-input">
+          <span class="input-label">Task Type</span>
+          {{ type | uppercase }}
+      </label>    
+      <label class="item item-input" ng-hide="hideproject()">
+          <span class="input-label">Project</span>
+          {{ projectname }} 
+      </label>  
+      <label class="item item-input" ng-hide="hideproject()">
+          <span class="input-label">Project Desc</span>
+          {{ projectdesc }} 
+      </label>   
+      <label class="item item-input">
+          <span class="input-label">Date/Time</span>
+          {{ taskdate | date:'dd/MM/yyyy' }} - {{time}} 
+      </label>
+            <label class="item item-input">
+          <span class="input-label">Address</span>
+          {{ address }} 
+      </label> 
+      <label class="item item-input">
+          <span class="input-label">City</span>
+          {{ city }} 
+      </label> 
+      <label class="item item-input">
+          <span class="input-label">Contact</span>
+          {{ contact }} 
+      </label>   
+      <label class="item item-input">
+          <span class="input-label">Notes</span>
+          {{ notes }} 
+      </label>          
+   
+      <label class="item item-input">
+          <span class="input-label">Assign To *</span>
+          <select name="assignto" ng-model="task.assignto" ng-required="true">
+            <option ng-repeat="employee in employeelist" value="{{employee.id}}">
+             {{employee.fullname}}
+            </option>
+          </select>          
+      </label>
+
+      </form>
+
+    </div>
+
+  </ion-content>
+  <div class="bar bar-footer bar-energized footer-button">
+  <a class="button button-full button-energized" ng-click="showAssignTaskConfirm()"><strong>ASSIGN</strong></a>
+</div>
+</ion-view>

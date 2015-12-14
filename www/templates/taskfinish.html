@@ -1,0 +1,17 @@
+<ion-view hide-nav-bar="true" view-title="Task Finish">
+  <div class="bar bar-header bar-light barstyle">
+   <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+   <h1 class="title">Finished Task</h1>
+   <span class="button button-icon icon ion-checkmark-round" ng-show="checkin_check" style="color: #DF5D44;"></span>
+  </div>
+  <ion-content class="has-header" scroll="false">
+    <div class="content_pane">
+
+  	<div class="padding">Task has been finished. Go back to main menu to select another task.</div>
+  	
+    </div>
+  </ion-content>
+  <div class="bar bar-footer bar-energized footer-button">
+    <a class="button button-full button-energized" ng-click="showFinishTaskAlert()"><strong>FINISH</strong></a>
+  </div>
+</ion-view>

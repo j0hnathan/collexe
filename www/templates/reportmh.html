@@ -1,0 +1,53 @@
+<ion-view hide-nav-bar="true" view-title="Generate Report">
+  <div class="bar bar-header bar-light barstyle">
+   <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+   <h1 class="title">{{ curdate | date:'dd/MM/yyyy' }}</h1>
+   <span class="button button-icon icon ion-checkmark-round" ng-show="checkin_check" style="color: #DF5D44;"></span>
+  </div>
+  <ion-content class="has-header" scroll="true">
+
+    <div class="content_pane">
+       <a class="button button-full item-icon-left whbg" ng-click="goBack()">
+      <div class="task_task2">MAN HOURS BY USER RPT</div>
+      <i class="icon ion-chevron-left icon-accessory" style="color: #133D69"></i>
+      </a>
+      <form action="" class="padding">
+
+      <label class="item item-input">
+          <span class="input-label">Employee</span>
+          <select name="employee" ng-model="report.employee" ng-required="true">
+            <option ng-repeat="employee in employeelist" value="{{employee.id}}">
+             {{employee.fullname}}
+            </option>
+          </select>          
+      </label>
+
+      <label class="item item-input">
+          <span class="input-label">Date From</span>
+          <input type="date" ng-model="report.datefrom" ng-required="true">             
+      </label>
+
+      <label class="item item-input">
+          <span class="input-label">Date To</span>
+          <input type="date" ng-model="report.dateto" ng-required="true">             
+      </label>
+
+      <label class="item item-input">
+          <span class="input-label">Filter By</span>
+          <select name="filt" ng-model="report.filt">
+            <option value="None">None</option>
+            <option value="City">City</option>
+            <option value="Job Type">Job Type</option>
+            </option>
+          </select>          
+      </label>
+
+      </form>
+
+    </div>
+
+  </ion-content>
+  <div class="bar bar-footer bar-energized footer-button">
+  <a class="button button-full button-energized" ng-click="GenerateRpt()"><strong>GENERATE REPORT</strong></a>
+  </div>
+</ion-view>

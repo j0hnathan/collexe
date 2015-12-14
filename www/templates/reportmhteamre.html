@@ -1,0 +1,44 @@
+<ion-view hide-nav-bar="true" view-title="task">
+  <div id="centerbox">
+  <div class="bar bar-header bar-light barstyle" >
+  	<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  	<span class="title">{{ curdate | date:'dd/MM/yyyy' }}</span>
+  	<span class="button button-icon icon ion-checkmark-round" ng-show="checkin_check" style="color: #DF5D44;"></span>
+  </div>
+  <ion-content class="has-header" scroll="true">
+
+  <div class="content_pane">
+
+  	<a class="button button-full item-icon-left taskbtn" ng-click="goBack()">
+      <div class="task_task" style="color: #f2f2ff">{{ report_name | uppercase}}</div>
+      <div class="task_title" style="color: #f2f2ff">RESULTS</div>
+      <i class="icon ion-chevron-left icon-accessory" style="color: #f2f2ff"></i>
+    </a>
+    <form action="" class="padding">
+      <label class="item item-input">
+          <span class="input-label">Date From</span>
+          {{ datefrom | date:'dd/MM/yyyy' }}
+      </label>   
+      <label class="item item-input">
+          <span class="input-label">Date To</span>
+          {{ dateto | date:'dd/MM/yyyy' }} 
+      </label>  
+    </form>
+  </div>
+  <div class="content_pane">
+
+    <ion-list show-delete="false" can-swipe="false">
+      <ion-item ng-repeat="report in reports" class="item-remove-animate item-icon-right" type="item-text-wrap">
+        <div class="taskx2">{{report.fullname | uppercase}}</div>
+        <div>{{report.jobdays}} job days</div>
+         <i class="icon timesheet_interval">
+        {{report.elapsed}}</i>
+      </ion-item>  
+    </ion-list>   
+
+    </div>
+  </ion-content>
+  <!--<div class="bar bar-footer bar-energized footer-button" ng-hide="hidebutton()" bg>
+    <a class="button button-full button-energized" ng-click="startTask(id)"><strong>START</strong></a> ng-hide="{{task_status_id == 'A'}}-->
+  </div>
+</ion-view>

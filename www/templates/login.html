@@ -1,0 +1,16 @@
+<ion-view id="loginPage" hide-nav-bar="true" view-title="Login">
+  <ion-content class="padding">
+      <form novalidate role="form">
+      <div class="list">
+        <label class="item item-input">
+          <input type="text" placeholder="USERNAME" maxlength="30" ng-model="login.username" ng-required="true" style="text-align: center">
+        </label>
+        <label class="item item-input">
+          <input type="password" placeholder="PASSWORD" maxlength="30" ng-model="login.password" ng-required="true" style="text-align: center">
+        </label>
+        <button class="button button-light button-block" ng-click="login();" >LOGIN</button>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>
+
